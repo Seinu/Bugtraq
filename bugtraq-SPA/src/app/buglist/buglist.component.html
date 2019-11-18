@@ -1,3 +1,26 @@
-<p *ngFor="let bug of buglist">
-  {{bug.id}}, {{bug.reportedBy}}, {{bug.submitDate}}, {{bug.category}}, {{bug.bugName}}, {{bug.bugSummary}}, {{bug.status}}, {{bug.priority}}, {{bug.assignedTo}}, {{bug.lastUpdate}}
-</p>
+<table>
+  <tr>
+    <th>Bug ID</th>
+    <th>Reported By</th>
+    <th>Submission Time</th>
+    <th>Category</th>
+    <th>Bug Name </th>
+    <th>Bug Summary</th>
+    <th>Status</th>
+    <th>Priority</th>
+    <th>Assigned To</th>
+    <th>Latest Update</th>
+  </tr>
+  <tr *ngFor="let bug of buglist">
+    <td>{{bug.id}}</td>
+    <td>{{bug.reportedBy}}</td>
+    <td>{{bug.submitDate}}</td>
+    <td>{{bug.category}}</td>
+    <td>{{bug.bugName}}</td>
+    <td>{{bug.bugSummary}}</td>
+    <td>{{bug.status}}</td>
+    <td>{{bug.priority}}</td>
+    <td>{{bug.assignedTo}}</td>
+    <td>{{bug.lastUpdate}}</td>
+  </tr>
+</table>

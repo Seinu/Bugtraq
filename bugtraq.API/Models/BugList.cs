@@ -10,6 +10,7 @@ namespace bugtraq.API.Models
     public string BugSummary { get; set; }
     public string Status { get; set; }
     public string Priority { get; set; }
+    public int DevId { get; set; }
     public string AssignedTo { get; set; }
     public string LastUpdate { get; set; }
   }

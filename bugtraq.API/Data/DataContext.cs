@@ -8,5 +8,6 @@ namespace bugtraq.API.Data
     public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
     public DbSet<BugList> BugLists { get; set; }
+    public DbSet<Developer> Devs { get; set; }
   }
 }

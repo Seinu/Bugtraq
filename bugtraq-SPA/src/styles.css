@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
-@import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 4px;
+}
+.fixed-bottom {
+  position: relative;
 }

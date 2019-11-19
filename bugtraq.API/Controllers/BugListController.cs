@@ -21,6 +21,7 @@ namespace bugtraq.API.Controllers
 
     }
     // GET api/values
+    [AllowAnonymous]
     [HttpGet]
     public async Task<IActionResult> GetBugLists()
     {

@@ -1,0 +1,44 @@
+<div class="container mt-5">
+  <div *ngIf="!registerMode" style="text-align: center;">
+    <h1>Welcome to Bugtraq!</h1>
+    <p class="lead">You can submit a bug in the top left or if you are a developer you can login in the top right or register below.</p>
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg" (click)="registerToggle()">Register</button>
+    </div>
+  </div>
+
+  <div *ngIf="registerMode" class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <app-register [bugListFromHome]="buglist" (cancelRegister)="cancelRegisterMode($event)"></app-register>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table>
+    <tr>
+      <th>Bug ID</th>
+      <th>Reported By</th>
+      <th>Submission Time</th>
+      <th>Category</th>
+      <th>Bug Name </th>
+      <th>Bug Summary</th>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>Assigned To</th>
+      <th>Latest Update</th>
+    </tr>
+    <tr *ngFor="let bug of buglist">
+      <td>{{bug.id}}</td>
+      <td>{{bug.reportedBy}}</td>
+      <td>{{bug.submitDate}}</td>
+      <td>{{bug.category}}</td>
+      <td>{{bug.bugName}}</td>
+      <td>{{bug.bugSummary}}</td>
+      <td>{{bug.status}}</td>
+      <td>{{bug.priority}}</td>
+      <td>{{bug.assignedTo}}</td>
+      <td>{{bug.lastUpdate}}</td>
+    </tr>
+  </table>
